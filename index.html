@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPACE EXPLORER | Discover The Universe</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #030612;
+    color: white;
+}
+
+/* Navigation */
+header {
+    width: 100%;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #72d7ff;
+    letter-spacing: 3px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #72d7ff;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    background:
+    linear-gradient(90deg, #030612 20%, #03061299 60%, transparent),
+    url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564")
+    center/cover;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #72d7ff;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #c5d2e8;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background: #36bdf5;
+    color: #030612;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+/* Planets */
+.section {
+    padding: 90px 8%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.section > p {
+    color: #aabbd4;
+    margin-bottom: 40px;
+}
+
+.planet-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.planet {
+    background: #101b35;
+    border: 1px solid #25395c;
+    border-radius: 15px;
+    padding: 30px 20px;
+    transition: 0.4s;
+}
+
+.planet:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 0 25px #36bdf555;
+}
+
+.planet img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.planet h3 {
+    color: #72d7ff;
+    margin-bottom: 10px;
+}
+
+.planet p {
+    color: #b8c7dc;
+    line-height: 1.6;
+}
+
+/* About */
+.about {
+    background: #0a1226;
+    padding: 80px 12%;
+    text-align: center;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.9;
+    color: #b8c7dc;
+}
+
+/* Footer */
+footer {
+    background: #02040b;
+    padding: 25px;
+    text-align: center;
+    color: #8292aa;
+}
+
+@media(max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">✦ SPACE EXPLORER</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#planets">Planets</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+<!-- Home -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>EXPLORE THE <span>UNIVERSE</span></h1>
+
+        <p>
+            Discover the mysteries of space, explore distant
+            galaxies, travel across planets and experience
+            the infinite beauty of our universe.
+        </p>
+
+        <a href="#planets" class="btn">EXPLORE NOW →</a>
+    </div>
+</section>
+
+<!-- Planets -->
+<section class="section" id="planets">
+    <h2>Explore The Planets</h2>
+    <p>Discover the fascinating worlds of our solar system.</p>
+
+    <div class="planet-container">
+
+        <div class="planet">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg">
+            <h3>Mercury</h3>
+            <p>The smallest planet and closest to the Sun.</p>
+        </div>
+
+        <div class="planet">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg">
+            <h3>Venus</h3>
+            <p>The hottest planet in our solar system.</p>
+        </div>
+
+        <div class="planet">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg">
+            <h3>Earth</h3>
+            <p>Our beautiful home and the only known planet with life.</p>
+        </div>
+
+        <div class="planet">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg">
+            <h3>Mars</h3>
+            <p>The mysterious red planet.</p>
+        </div>
+
+        <div class="planet">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter.jpg">
+            <h3>Jupiter</h3>
+            <p>The largest planet in our solar system.</p>
+        </div>
+
+        <div class="planet">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg">
+            <h3>Saturn</h3>
+            <p>Famous for its spectacular ring system.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+    <h2>Beyond Our World</h2>
+
+    <p>
+        Space is an endless universe filled with stars,
+        planets, galaxies, black holes and countless mysteries.
+        Human exploration continues to expand our understanding
+        of the cosmos and our place within it.
+    </p>
+
+    <a href="#home" class="btn">BACK TO TOP ↑</a>
+</section>
+
+<footer>
+    <p>© 2026 SPACE EXPLORER | Discover Beyond Infinity ✦</p>
+</footer>
+
+</body>
+</html>
